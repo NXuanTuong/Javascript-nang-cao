@@ -309,10 +309,10 @@ const ContentPage = {
                 <div>
                     <h3 class="text-xl font-medium mb-6">Quick Links</h3>
                     <ul>
-                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:ml-2 transition-all delay-300 ease-out" href="">About</a></li>
-                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:ml-2 transition-all delay-300 ease-out" href="">Offers & Discounts</a></li>
-                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:ml-2 transition-all delay-300 ease-out" href="">Get Coupon</a></li>
-                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:ml-2 transition-all delay-300 ease-out" href="">Contact Us</a></li>
+                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:text-red-500 hover:ml-2 transition-all delay-300 ease-out" href="">About</a></li>
+                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:text-red-500 hover:ml-2 transition-all delay-300 ease-out" href="">Offers & Discounts</a></li>
+                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:text-red-500 hover:ml-2 transition-all delay-300 ease-out" href="">Get Coupon</a></li>
+                        <li class="mb-5 text-[#012f5f]"><a class="text-[#868c98] font-light hover:text-red-500 hover:ml-2 transition-all delay-300 ease-out" href="">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
