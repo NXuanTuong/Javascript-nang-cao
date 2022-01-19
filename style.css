@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.post_img{
+    @apply overflow-hidden mb-5;
+}
+.post_img img{
+    @apply transition-all max-w-full duration-200 delay-200 ease-out;
+}
+.post_img img:hover{
+    @apply scale-105;
+}
+.list_img{
+    @apply relative w-full overflow-hidden;
+}
+.list_img img{
+    @apply transition-all max-w-full duration-200 delay-200 ease-out;
+}
+.list_img img:hover{
+    @apply scale-105 opacity-90;
+}
+
+.list_img-cols-2{
+    @apply w-full overflow-hidden;
+}
+.list_img-cols-2 img{
+    @apply transition-all max-w-full duration-200 delay-200 ease-out;
+}
+.list_img-cols-2 img:hover{
+    @apply scale-105 opacity-90;
+}
+
+.list_img-cols-3 {
+    @apply grid grid-rows-2 overflow-hidden;
+}
+.list_img-cols-3 img{
+    @apply transition-all max-w-full duration-200 delay-200 ease-out;
+}
+.list_img-cols-3 img:hover{
+    @apply scale-105 opacity-90;
+}

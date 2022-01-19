@@ -1,4 +1,5 @@
 import Banner from "../components/banner";
+import ContentPage from "../components/content";
 import NavHeader from "../components/header";
 
 const HomePage = {
@@ -7,6 +8,7 @@ const HomePage = {
             <div class="max-w-full m-auto">
                     ${NavHeader.render()}
                     ${Banner.render()}
+                    ${ContentPage.render()}
             </div>
         `;
     },

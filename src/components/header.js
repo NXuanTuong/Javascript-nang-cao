@@ -2,11 +2,11 @@ const NavHeader = {
     render() {
         return /* html */ `
         <header>
-            <div class="px-4">
-                <div class="w-full p-4 m-auto">
+            <div class="px-3">
+                <div class="w-full px-3 py-0 m-auto">
                     <div class = "flex items-center content-center justify-between flex-wrap">
                         <div>
-                            <img src="https://picsum.photos/150/100" alt="">
+                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/logo/xlogo2_footer.png.pagespeed.ic.WC60eOreUW.webp" alt="">
                         </div>
                         
                         <div class="block">

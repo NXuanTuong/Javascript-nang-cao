@@ -1,7 +1,7 @@
 const Banner = {
     render() {
         return /* html */ `
-            <div class="w-full p-7 m-auto bg-[#f0f0f2] mb-32">
+            <div class="w-full p-7 m-auto bg-[#f0f0f2]">
                 <div class="flex -m-4 justify-between items-center">
                     <div class="relative w-full p-32 m-h-[2%]">
                         <div class ="overflow-hidden">
