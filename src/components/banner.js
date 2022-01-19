@@ -15,7 +15,7 @@ const Banner = {
 
                     <div class="relative w-full p-5 m-h-[2%] block">
                         <div class="relative">
-                            <img src="https://picsum.photos/300/600" class="m-auto align-middle border-none" alt="">
+                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/hero/xwatch.png.pagespeed.ic.LlRtijfV2T.webp" class="m-auto align-middle border-none" alt="">
                         </div>
                     </div>
                 </div>                

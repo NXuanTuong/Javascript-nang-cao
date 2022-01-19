@@ -14,7 +14,7 @@ const ContentPage = {
                     <div class="relative p-4 leading-5">
                         <div class="mb-20">
                             <div class="post_img">
-                                <img src="https://picsum.photos/363/492" class="middle max-w-full w-full" alt="">
+                                <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/xnew_product1.png.pagespeed.ic.GC30TWVUh9.webp" class="middle max-w-full w-full" alt="">
                             </div>
 
                             <div class="text-center">
@@ -27,7 +27,7 @@ const ContentPage = {
                     <div class="relative p-4 leading-5">
                     <div class="mb-20">
                         <div class="post_img">
-                            <img src="https://picsum.photos/363/492" class="middle max-w-full w-full object-cover" alt="">
+                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/xnew_product2.png.pagespeed.ic.TisB6MUmE3.webp" class="middle max-w-full w-full object-cover" alt="">
                         </div>
 
                         <div class="text-center">
@@ -40,7 +40,7 @@ const ContentPage = {
                 <div class="relative p-4 leading-5">
                 <div class="mb-20">
                     <div class="post_img">
-                        <img src="https://picsum.photos/363/492" class="middle max-w-full w-full" alt="">
+                        <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/xnew_product3.png.pagespeed.ic.xG1joZNkeV.webp" class="middle max-w-full w-full" alt="">
                     </div>
 
                     <div class="text-center">
