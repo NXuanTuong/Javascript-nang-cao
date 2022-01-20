@@ -1,5 +1,6 @@
 import Banner from "../components/banner";
 import ContentPage from "../components/content";
+import FooterPage from "../components/footer";
 import NavHeader from "../components/header";
 
 const HomePage = {
@@ -9,6 +10,7 @@ const HomePage = {
                     ${NavHeader.render()}
                     ${Banner.render()}
                     ${ContentPage.render()}
+                    ${FooterPage.render()}
             </div>
         `;
     },

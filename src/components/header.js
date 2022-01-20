@@ -11,9 +11,9 @@ const NavHeader = {
                         
                         <div class="block">
                             <ul class="list-none m-0 p-0">
-                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="#">Home</a></li>
+                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/">Home</a></li>
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="#">Shop</a></li>
-                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="#">About</a></li>
+                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/about">About</a></li>
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="#">Blog</a></li>
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="#">Contact</a></li>
                             </ul>
