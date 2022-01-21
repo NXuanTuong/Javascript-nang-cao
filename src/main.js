@@ -1,6 +1,7 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
 import HomePage from "./pages/home";
+import NewPage from "./pages/news";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -14,6 +15,9 @@ router.on({
     },
     "/about": () => {
         print(AboutPage);
+    },
+    "/news": () => {
+        print(NewPage);
     },
 });
 router.resolve();
