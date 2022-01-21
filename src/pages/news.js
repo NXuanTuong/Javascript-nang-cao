@@ -140,8 +140,8 @@ const NewPage = {
                     <div class="relative mb-14 text-center bg-[#fbf9ff] py-10">
                         <input type="" placeholder="Search Keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'" class="text-sm mb-5 w-[260px] px-5 h-[44px] outline-none border border-gray-300" name="" value="">
                         <span class="absolute cursor-pointer block top-[40px] left-[305px] bg-[#ff2020] text-white px-3.5 py-2.5"><i class="fas fa-search"></i></span> <br>
-                        <div class="hover:text-black hover:border hover:bg-white cursor-pointer font-['Josefin Sans','sans-serif'] py-3 px-[88px] text-white bg-[#ff2020] font-lg uppercase leading-0 inline-block boder-0 relative">
-                        <a class="transition-colors delay-300 ease-linear" herf="">Shop Now</a>
+                        <div class="cursor-pointer font-['Josefin Sans','sans-serif'] py-3 px-[88px] text-white bg-[#ff2020] uppercase inline-block">
+                        <a class="" herf="">Shop Now</a>
                         </div>     
                     </div>
 
@@ -248,7 +248,7 @@ const NewPage = {
                         <h3 class="text-2xl font-semibold border-b mb-6 py-3">Newsletter</h3>
                         <input type="" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'" class="text-sm mb-5 w-[310px] px-5 h-[44px] outline-none border border-gray-300" name="" value="">
                         <div class="hover:bg-white hover:text-black hover:border hover:border-red-500 cursor-pointer font-['Josefin Sans','sans-serif'] py-3 px-[113px] text-white bg-[#ff2020] leading-0 inline-block boder-0 relative">
-                        <a class="font-bold uppercase" herf="">Subscribe</a>
+                        <a class="uppercase" herf="">Subscribe</a>
                         </div>     
                     </div>    
                     
