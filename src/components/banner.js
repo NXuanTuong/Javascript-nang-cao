@@ -14,8 +14,8 @@ const Banner = {
                     </div>
 
                     <div class="relative w-full p-5 m-h-[2%] block">
-                        <div class="relative">
-                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/hero/xwatch.png.pagespeed.ic.LlRtijfV2T.webp" class="m-auto align-middle border-none" alt="">
+                        <div class="relative overflow-hidden">
+                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/hero/xwatch.png.pagespeed.ic.LlRtijfV2T.webp" class="scale-110 m-auto align-middle border-none" alt="">
                         </div>
                     </div>
                 </div>                

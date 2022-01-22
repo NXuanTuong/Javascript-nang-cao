@@ -10,7 +10,7 @@ const NewPage = {
                 <ul class="text-center p-5">
                     <li class="inline-block"><a class="px-1 py-3 text-lg font-medium text-[#8d979d]" href="/">Home</a></li> 
                     <li class="inline-block"><span class="px-1 text-lg font-medium text-[#8d979d] py-3">></span></li>
-                    <li class="inline-block"><a  class="px-1 text-lg font-medium text-[#8d979d] py-3" href="/news">Blog</a></li>
+                    <li class="inline-block"><a  class="px-1 text-lg font-medium text-black py-3" href="/news">Blog</a></li>
                 </ul>
             </div>
 
@@ -137,9 +137,11 @@ const NewPage = {
                 </div>
             </div>
                 <div>
-                    <div class="relative mb-14 text-center bg-[#fbf9ff] py-10">
+                    <div class="mb-14 text-center bg-[#fbf9ff] py-10"> 
+                        <div class="relative flex justify-center">
                         <input type="" placeholder="Search Keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'" class="text-sm mb-5 w-[260px] px-5 h-[44px] outline-none border border-gray-300" name="" value="">
-                        <span class="absolute cursor-pointer block top-[40px] left-[305px] bg-[#ff2020] text-white px-3.5 py-2.5"><i class="fas fa-search"></i></span> <br>
+                        <span class="absolute cursor-pointer block left-[330px] bg-[#ff2020] text-white px-3.5 py-2.5"><i class="fas fa-search"></i></span>
+                        </div>
                         <div class="cursor-pointer font-['Josefin Sans','sans-serif'] py-3 px-[88px] text-white bg-[#ff2020] uppercase inline-block">
                         <a class="" herf="">Shop Now</a>
                         </div>     
@@ -251,7 +253,6 @@ const NewPage = {
                         <a class="uppercase" herf="">Subscribe</a>
                         </div>     
                     </div>    
-                    
 
                 </div>
             </div>

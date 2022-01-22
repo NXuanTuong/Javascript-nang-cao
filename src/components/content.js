@@ -19,7 +19,7 @@ const ContentPage = {
 
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-4"><a href="">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium">$ 45,743</span>
+                                <span class="text-lg text-red-500 font-medium">$ 145,743</span>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const ContentPage = {
 
                         <div class="text-center">
                         <h3 class="text-2xl font-bold text-[#444] mb-4"><a href="">Thermo Ball Etip Gloves</a></h3>
-                        <span class="text-lg text-red-500 font-medium">$ 45,743</span>
+                        <span class="text-lg text-red-500 font-medium">$ 145,743</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const ContentPage = {
 
                     <div class="text-center">
                     <h3 class="text-2xl font-bold text-[#444] mb-4"><a href="">Thermo Ball Etip Gloves</a></h3>
-                    <span class="text-lg text-red-500 font-medium">$ 45,743</span>
+                    <span class="text-lg text-red-500 font-medium">$ 145,743</span>
                     </div>
                 </div>
             </div>
@@ -81,133 +81,244 @@ const ContentPage = {
                 </div>
 
                 <div class="grid grid-cols-3 gap-6">
-                    <div class="mb-10">
-                        <div>
-                        <a href="#">
-                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png.webp" class="w-full object-cover mb-5"alt="">
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
+                            <a href="#">
+                                <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
-                        </div>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-green-300 py-1 border -left-[3%]"><p>New</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                                <ul>
+                                    <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                    <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                    <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                    <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                    <li><i class="bi bi-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                            </div>
+                        </div> 
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
-                        </div>
+                                <span class="text-lg text-red-500 font-medium block">$ 145,743</span>    
+                            </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
-                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png.webp" class="w-full object-cover mb-5" alt="">
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
+                        <a href="#">
+                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png.webp" class="w-full object-cover mb-5" alt=""></a>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-red-300 py-1 border -left-[3%]"><p>30%</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                            </div>
                         </div>
 
                        <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <div class="flex justify-center items-center">
+                                    <del>
+                                        <span class="text-base text-red-500 mb-5 block">$ 145,743</span>
+                                    </del>
+                                    <span class="text-lg px-2 font-semibold mb-5 block">$ 145,743</span>
+                                </div>
+                                
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
-                            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp" class="w-full object-cover mb-5" alt="">
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
+                            <a href="#"><img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp" class="w-full object-cover mb-5" alt=""></a>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
 
                         <div class ="text-center">
                             <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                            <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                            <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                            <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                        </div>     
+                            <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>
                     </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular4.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-green-300 py-1 border -left-[3%]"><p>New</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                            </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>   
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-green-300 py-1 border -left-[3%]"><p>New</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular6.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-green-300 py-1 border -left-[3%]"><p>New</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
-                                <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
-                                <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
-                            </div>     
+                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 145,743</span>
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div>
+                    <div class="mb-10 product_item h-[524px] hover:shadow-lg shadow-md">
+                        <div class="relative overflow-hidden">
                         <a href="#">
                             <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png.webp" class="w-full object-cover mb-5"alt="">
                             </a>
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-red-300 py-1 border -left-[3%]"><p>20%</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl invisible top-[20px] right-[20px]"><i class="bi bi-heart-fill"></i></span>
+                            <div class="absolute top-[65%] mx-5 feedback_item">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[83%] left-[28%] delay-150 duration-200 ease-in-out py-2 px-6 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                                <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
                         </div>
                             <div class ="text-center">
                                 <h3 class="text-2xl font-bold text-[#444] mb-3"><a href="#">Thermo Ball Etip Gloves</a></h3>
-                                <span class="text-lg text-red-500 font-medium mb-5 block">$ 45,743</span>
+                                <div class="flex justify-center items-center">
+                                    <del>
+                                        <span class="text-base text-red-500 mb-5 block">$ 145,743</span>
+                                    </del>
+                                    <span class="text-lg px-2 font-semibold mb-5 block">$ 145,743</span>
+                                </div>
                                 <div class="hover:bg-red-500 cursor-pointer delay-150 duration-200 ease-in-out py-3 px-7 text-white bg-[#4a4a4b] font-lg uppercase leading-0 inline-block boder-0 relative tracking-wide">
                                 <a class="transition-colors delay-300 ease-linear" herf="">Add to Cart</a>
                             </div>     
