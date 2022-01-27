@@ -32,10 +32,10 @@ const NavHeader = {
                                 <span class="text-black text-base font-semibol px-4 py-3">
                                   <i class="fas fa-user"></i> 
                                   <span>
-                                 <a href="#" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
+                                 <a href="/login" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
                                  <span>/</span> 
                                  <span>
-                                  <a href="#" class="hover:text-red-500 cursor-pointer" >Register</a>
+                                  <a href="/logout" class="hover:text-red-500 cursor-pointer" >Register</a>
                                  </span> 
                                 </span>
                                 </div>

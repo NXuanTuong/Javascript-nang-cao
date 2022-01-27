@@ -1,5 +1,7 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
+import LogIn from "./pages/auth/login";
+import LogOut from "./pages/auth/logout";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
 import NewPage from "./pages/news";
@@ -26,6 +28,12 @@ router.on({
     },
     "/contact": () => {
         print(ContactPage);
+    },
+    "/login": () => {
+        print(LogIn);
+    },
+    "/logout": () => {
+        print(LogOut);
     },
 });
 router.resolve();
