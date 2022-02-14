@@ -1,7 +1,9 @@
+import { ReRender } from "../utils/Rerender";
+
 const NavHeader = {
     render() {
         return /* html */ `
-        <header>
+        <header id="header">
             <div class="px-3">
                 <div class="w-full px-3 py-0 m-auto">
                     <div class = "flex items-center content-center justify-between flex-wrap">
@@ -21,25 +23,40 @@ const NavHeader = {
 
                         <div>
                             <ul class="list-none items-center m-0 p-0 flex justify-between">
-                                <li class="list-item"><a href ="">
+                                <li class="list-item px-5"><a href ="">
                                     <form class="bg-gray-300 border rounded-md py-[8px] px-[7px] duration-1000 my-2">
                                         <button type=""><i class="bi bi-search"></i></button>
                                         <input type="" placeholder="Men's watch..." class="border-none bg-transparent w-[250px] px-2 outline-none" name="" value="">
                                     </form>
                                 </li>
-                                <li>
-                                <div class="inline-block">
-                                <span class="text-black text-base font-semibol px-4 py-3">
-                                  <i class="fas fa-user"></i> 
-                                  <span>
-                                 <a href="/login" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
-                                 <span>/</span> 
-                                 <span>
-                                  <a href="/logout" class="hover:text-red-500 cursor-pointer" >Register</a>
-                                 </span> 
-                                </span>
-                                </div>
-                                </li>
+                                ${localStorage.getItem("user") ? /* html */`
+                                    <li>
+                                    <div class="inline-block">
+                                    <span class="text-black text-base font-semibol">
+                                         <i class="fa-solid fa-user-check"></i>
+                                    <span>
+                                        <a href="" id="email" class="px-3"></a></span> 
+                                    <span>
+                                    <a href="" id="logout" class="hover:text-red-500 cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                                    </span> 
+                                    </span>
+                                    </div>
+                                    </li>
+                                ` : /* html */`
+                                    <li>
+                                    <div class="inline-block">
+                                    <span class="text-black text-base font-semibol px-4 py-3">
+                                    <i class="fas fa-user"></i> 
+                                    <span>
+                                    <a href="/signin" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
+                                    <span>/</span> 
+                                    <span>
+                                    <a href="/signup" class="hover:text-red-500 cursor-pointer">Register</a>
+                                    </span> 
+                                    </span>
+                                    </div>
+                                    </li>
+                                `}
                                 <li class="list-item"><a href ="">
                                 <span class="text-black text-lg font-semibol px-4 py-3 hover:text-red-500 cursor-pointer">
                                 <i class="fas fa-shopping-cart"></i>
@@ -53,6 +70,17 @@ const NavHeader = {
         </header>
         
         `;
+    },
+    afterRender() {
+        const emailHeader = document.querySelector("#email");
+        if (emailHeader) {
+            emailHeader.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        const logout = document.querySelector("#logout");
+        logout.addEventListener("click", () => {
+            localStorage.removeItem("user");
+            ReRender(NavHeader, "#header");
+        });
     },
 };
 export default NavHeader;

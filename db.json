@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Xin chào mọi người 7",
+      "content": "Chào mừng mọi người đến với trang website của mình",
+      "category": "Du lịch, Ăn uống",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644661539/byuzyd3nblmtrf4k4n0d.jpg",
+      "comment": "03 comment"
+    },
+    {
+      "title": "Xin chào mọi người",
+      "content": "Chào mừng mọi người đến với trang website của mình",
+      "category": "Du lịch, Ăn uống",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644661639/jhfiyx9bjzf92tmyslqf.jpg",
+      "comment": "04 comment",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "doanminhthang2808@gmail.com",
+      "password": "$2a$10$dDmip3xEfY9XpHDZ810a4eovNwUzaa4l53dP61.Flmk0I2txsRyxC",
+      "name": "Nguyễn Xuân Tường",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644677181/y5pzh4xwrzfwpegukbfq.png",
+      "address": "Nam cao",
+      "position": "admin",
+      "id": 1
+    },
+    {
+      "email": "tuongbabynhok1@gmail.com",
+      "password": "$2a$10$kYRqNDoCEQsCO8GBsrVn4OYJLLSCVUnUd3sM.M.d04IVG3N0nvCXO",
+      "name": "Nguyễn Xuân Tường",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644728111/ssffwrvoyw1gnemcn8kn.jpg",
+      "address": "Nam cao",
+      "position": "admin",
+      "id": 2
+    }
+  ]
+}

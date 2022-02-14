@@ -1,17 +1,39 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
-import LogIn from "./pages/auth/login";
-import LogOut from "./pages/auth/logout";
+import ListBlogs from "./pages/admin/Blogs";
+import addBlogs from "./pages/admin/Blogs/Service/add_blogs";
+import editBlogs from "./pages/admin/Blogs/Service/edit_blog";
+import DashBoard from "./pages/admin/dashboard";
+import Signin from "./pages/auth/signin";
+import Signup from "./pages/auth/signup";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
 import NewPage from "./pages/news";
 import ProductPage from "./pages/product";
+import ListCustomer from "./pages/admin/Customer/List_customer";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.querySelector("#app").innerHTML = content.render();
+const print = async (content, id) => {
+    document.querySelector("#app").innerHTML = await content.render(id);
+    if (content.afterRender) content.afterRender(id);
 };
+
+router.on("/admin/*", () => {}, {
+    before: (done) => {
+        if (localStorage.getItem("user")) {
+            const userID = JSON.parse(localStorage.getItem("user")).id;
+
+            if (userID === 1) {
+                done();
+            } else {
+                document.location.href = "/";
+            }
+        } else {
+            document.location.href = "/";
+        }
+    },
+});
 
 router.on({
     "/": () => {
@@ -29,11 +51,26 @@ router.on({
     "/contact": () => {
         print(ContactPage);
     },
-    "/login": () => {
-        print(LogIn);
+    "/signup": () => {
+        print(Signup);
     },
-    "/logout": () => {
-        print(LogOut);
+    "/signin": () => {
+        print(Signin);
+    },
+    "/admin/dashboard": () => {
+        print(DashBoard);
+    },
+    "/admin/blogs": () => {
+        print(ListBlogs);
+    },
+    "/admin/blogs/add": () => {
+        print(addBlogs);
+    },
+    "/admin/blogs/:id/edit": (value) => {
+        print(editBlogs, value.data.id);
+    },
+    "/admin/users": () => {
+        print(ListCustomer);
     },
 });
 router.resolve();

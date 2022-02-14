@@ -14,5 +14,8 @@ const HomePage = {
             </div>
         `;
     },
+    afterRender() {
+        NavHeader.afterRender();
+    },
 };
 export default HomePage;

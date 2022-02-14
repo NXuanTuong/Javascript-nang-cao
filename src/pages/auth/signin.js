@@ -1,11 +1,15 @@
-const LogIn = {
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+import { signin } from "../../api/user";
+
+const Signin = {
     render() {
         return /* html */ `
             <!-- component -->
-<div class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
-style="background-image: url(https://blog.curnonwatch.com/wp-content/uploads/2021/03/thi-truong-dong-ho-viet-nam-thumbnail-1-scaled.jpg);">
-<div class="absolute bg-black opacity-60 inset-0 z-0"></div>
-<div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
+    <div class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+    style="background-image: url(https://blog.curnonwatch.com/wp-content/uploads/2021/03/thi-truong-dong-ho-viet-nam-thumbnail-1-scaled.jpg);">
+    <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+    <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
     <div class="text-center">
         <h2 class="mt-6 text-3xl font-bold text-gray-900">
             Welcom Back!
@@ -22,17 +26,17 @@ style="background-image: url(https://blog.curnonwatch.com/wp-content/uploads/202
         <span class="text-gray-500 font-normal">OR</span>
         <span class="h-px w-16 bg-gray-300"></span>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
+    <form id="signin" class="mt-8 space-y-6" action="" method="POST">
         <input type="hidden" name="remember" value="true">
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
-            <input class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="*VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: mail@gmail.com'" value="">
+            <input id="email" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="*VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: mail@gmail.com'" value="">
         </div>
         <div class="mt-8 content-center">
             <label class="text-sm font-bold text-gray-700 tracking-wide">
                 Password
             </label>
-            <input class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="*VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: *****'" value="">
+            <input id="password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="*VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: *****'" value="">
         </div>
         <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -55,7 +59,7 @@ style="background-image: url(https://blog.curnonwatch.com/wp-content/uploads/202
         </div>
         <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
             <span>Don't have an account?</span>
-            <a href="/logout" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
+            <a href="/signup" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign up</a>
         </p>
     </form>
 </div>
@@ -63,5 +67,31 @@ style="background-image: url(https://blog.curnonwatch.com/wp-content/uploads/202
 
         `;
     },
+    afterRender() {
+        const signinForm = document.querySelector("#signin");
+        signinForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            try {
+                const { data } = await signin({
+                    email: document.querySelector("#email").value,
+                    password: document.querySelector("#password").value,
+                });
+                if (data) {
+                    localStorage.setItem("user", JSON.stringify(data.user));
+                    toastr.success("Đăng nhập thành công");
+                    setTimeout(() => {
+                        if (data.user.id === 1) {
+                            document.location.href = "/admin/dashboard";
+                        } else {
+                            document.location.href = "/";
+                        }
+                    }, 2000);
+                }
+            } catch (error) {
+                toastr.error(error.response.data);
+            }
+        });
+    },
 };
-export default LogIn;
+export default Signin;
