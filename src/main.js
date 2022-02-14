@@ -12,7 +12,7 @@ import NewPage from "./pages/news";
 import ProductPage from "./pages/product";
 import ListCustomer from "./pages/admin/Customer/List_customer";
 
-const router = new Navigo("/", { linksSelector: "a" });
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
 const print = async (content, id) => {
     document.querySelector("#app").innerHTML = await content.render(id);
