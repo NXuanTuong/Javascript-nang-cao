@@ -200,7 +200,7 @@ const ProductPage = {
                                 </div>
 
                                 <div>
-                                    <h3 class="text-base mb-2 font-semibold text-center overflow-ellipsis w-75 whitespace-nowrap overflow-hidden"><a href="/details_product/${products.id}">${products.name}</a></h3>
+                                    <h3 class="text-base mb-2 font-semibold text-center overflow-ellipsis w-75 whitespace-nowrap overflow-hidden"><a href="/#/details_product/${products.id}">${products.name}</a></h3>
                                     <div class="flex justify-center items-center">
                                         <del class="text-red-300"><span>$</span>${products.priceold}</del>
                                         <p class="px-2 font-semibold text-lg"><span>$</span>${products.pricenew}</p>

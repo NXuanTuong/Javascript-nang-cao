@@ -76,7 +76,7 @@ const Signup = {
         </div>
         <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
             <span>Accounts available</span>
-            <a href="/signin" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign in</a>
+            <a href="/#/signin" class="text-indigo-500 hover:text-indigo-500no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign in</a>
         </p>
     </form>
 </div>

@@ -20,8 +20,8 @@ const NavHeader = {
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/">Home</a></li>
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/#/product">Shop</a></li>
                                 <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/#/about">About</a></li>
-                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/news">Blog</a></li>
-                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/contact">Contact</a></li>
+                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/#/news">Blog</a></li>
+                                <li class="inline-block relative z-10"><a class ="text-[#141517] text-lg font-semibold block font-['Josefin Sans','sans-serif'] px-5 py-10 capitalize hover:text-red-500 transition-all delay-200 ease-out outline-none cursor-pointer" href ="/#/contact">Contact</a></li>
                             </ul>
                         </div>
 
@@ -52,17 +52,17 @@ const NavHeader = {
                                     <span class="text-black text-base font-semibol px-4 py-3">
                                     <i class="fas fa-user"></i> 
                                     <span>
-                                    <a href="/signin" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
+                                    <a href="/#/signin" class="hover:text-red-500 cursor-pointer">Log In</a></span> 
                                     <span>/</span> 
                                     <span>
-                                    <a href="/signup" class="hover:text-red-500 cursor-pointer">Register</a>
+                                    <a href="/#/signup" class="hover:text-red-500 cursor-pointer">Register</a>
                                     </span> 
                                     </span>
                                     </div>
                                     </li>
                                 `}
 
-                                <li class="list-item"><a href ="/cart">
+                                <li class="list-item"><a href ="/#/cart">
                                 <span class="text-black relative text-lg font-semibol px-4 py-3 cursor-pointer">
                                       <i class="fas fa-shopping-cart"></i>
                                       <div id="cartID" class="boder absolute border-red-500 bg-red-500 rounded-full px-2 py-1 -top-[2px] right-[5px] text-white text-xs text-center">${cart.length}</div>
