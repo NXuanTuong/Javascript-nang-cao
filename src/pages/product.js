@@ -213,10 +213,10 @@ const ProductPage = {
                             <div class="text-center mt-12">
                                 <ul class="block">
                                     <li class="inline-block px-4 py-2 border"><a class="text-[#777]" href="#"><i class="fas fa-angle-left"></i></a></li>
-                                    <li class="inline-block px-4 py-2 border bg-red-300"><a class="text-[#000]" href="#">1</a></li>
-                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]" href="#">2</a></li>
-                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]" href="#">3</a></li>
-                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    <li class="inline-block px-4 py-2 border bg-red-300 cursor-pointer"><a class="text-[#000]">1</a></li>
+                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]">2</a></li>
+                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]">3</a></li>
+                                    <li class="inline-block px-4 py-2 border"><a class="text-[#777]"><i class="fas fa-angle-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>

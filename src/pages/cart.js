@@ -80,15 +80,6 @@ const PageCart = {
                 </div>
                 <div style="border-top: 2px solid #ccc;" class="w-full"></div>
 
-                <div class="flex justify-between items-center mt-10 mb-10">
-                    <div>
-                        <p class="text-lg font-semibold uppercase">Items ${cart.length}</p>
-                    </div>
-
-                    <div>
-                        <p class="text-lg font-semibold text-red-500">$ ${cart[0].total}</p>
-                    </div>
-                </div>
 
                 <div class="mt-10 mb-10">
                     <p class="text-base font-semibold mb-2 uppercase">Shipping</p>
@@ -111,8 +102,9 @@ const PageCart = {
                         <p class="text-lg font-semibold uppercase">Total Cost</p>
                     </div>
 
-                    <div>
-                        <p class="text-lg font-semibold text-red-500">$ 355.000</p>
+                    <div class="flex items-center justify-center">
+                        <span class="text-lg font-semibold text-red-500 px-3">$</span>
+                        <p id="total_cart" class="text-lg font-semibold text-red-500">null</p> 
                     </div>
                 </div>
 
@@ -146,6 +138,17 @@ const PageCart = {
                 }
             });
         });
+        let cart = [];
+        if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+        }
+        let totalCart = 0;
+        const totalCartRender = document.querySelector("#total_cart");
+        cart.forEach((item) => {
+            totalCart += item.total;
+            console.log(totalCart);
+        });
+        totalCartRender.innerHTML = totalCart;
         NavHeader.afterRender();
     },
 };

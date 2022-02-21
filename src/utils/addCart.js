@@ -21,11 +21,9 @@ export const increase = (id, next) => {
     const currentProduct = cart.find((item) => item.id == id);
     currentProduct.quantity++;
 
-    let totalInt = +currentProduct.total;
     const priceInt = +currentProduct.pricenew;
     // console.log(typeof (priceInt));
-    totalInt += priceInt;
-    currentProduct.total = totalInt;
+    currentProduct.total += priceInt;
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
 };
@@ -34,11 +32,10 @@ export const decrease = (id, next) => {
     // eslint-disable-next-line no-plusplus
     currentProduct.quantity--;
 
-    let totalInt = +currentProduct.total;
-    const priceInt = +currentProduct.pricenew;
+    let priceInt = +currentProduct.pricenew;
     // console.log(typeof (priceInt));
-    totalInt -= priceInt;
-    currentProduct.total = totalInt;
+    currentProduct.total -= priceInt;
+    // console.log(typeof (priceInt))
 
     if (currentProduct.quantity < 1) {
         const confirm = window.confirm("Bạn có muốn xóa không ?");

@@ -17,7 +17,7 @@ const TableCategory = {
             </td>
     <td>
     <div class="text-sm font-normal text-gray-500">
-    <div class="text-base text-center font-semibold text-gray-900">${items.name}</div>
+    <div class="text-base text-center font-semibold text-gray-900">${items.nameCate}</div>
     </div>
     </td>
     <td class="p-4 whitespace-nowrap text-base font-normal text-gray-900">
@@ -35,7 +35,7 @@ const TableCategory = {
     </button>
     </td>
     </tr>
-        `)}
+        `).join("")}
     `;
     },
     afterRender() {
