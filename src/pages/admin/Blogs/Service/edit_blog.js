@@ -42,6 +42,10 @@ const editBlogs = {
           <input type="text" value="${data.comment}" name="comment" id="comment" placeholder="Enter your comment" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your comment'" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 p-3 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-md">
         </div>
 
+        <div class="col-span-6 sm:col-span-3">
+        <img id="previewImage" class="h-62 w-40 m-auto" src="${data.image}" alt="">
+        </div>
+
 
         </div>
       </div>
@@ -60,30 +64,41 @@ const editBlogs = {
     afterRender(id) {
         const editForm = document.querySelector("#form-edit-blogs");
         const image = document.querySelector("#image");
+        const imagePreview = document.querySelector("#previewImage");
+        let imgUploadedLink = "";
 
         const CLODINARY_API = "https://api.cloudinary.com/v1_1/assjavascript/image/upload";
         const CLODINARY_PRESET = "gxpasiys";
+
+        image.addEventListener("change", () => {
+            imagePreview.src = URL.createObjectURL(image.files[0]);
+        });
 
         editForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             try {
                 const file = image.files[0];
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", CLODINARY_PRESET);
+                if (file) {
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLODINARY_PRESET);
 
-                const { data } = await axios.post(CLODINARY_API, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data",
-                    },
-                });
+                    const { data } = await axios.post(CLODINARY_API, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    imgUploadedLink = data.url;
+                }
+
                 update({
                     id,
                     title: document.querySelector("#title").value,
                     content: document.querySelector("#content").value,
                     category: document.querySelector("#category").value,
-                    image: data.url,
+                    // eslint-disable-next-line no-unneeded-ternary
+                    image: imgUploadedLink ? imgUploadedLink : imagePreview.src,
                     comment: document.querySelector("#comment").value,
                 });
                 toastr.success("Sửa thành công");

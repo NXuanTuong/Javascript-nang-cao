@@ -41,6 +41,9 @@ const addBlogs = {
               <input type="text" name="comment" id="comment" placeholder="Enter your comment" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your comment'" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 p-3 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-md">
             </div>
 
+            <div class="col-span-6 sm:col-span-3">
+                <img id="previewImage" class="h-62 w-40 m-auto" src="https://blogmedia.evbstatic.com/wp-content/uploads/engineering/2018/08/09141147/Flexible-Reusable-React-File-Uploader.png" alt="">
+              </div>
 
             </div>
           </div>
@@ -58,7 +61,11 @@ const addBlogs = {
     afterRender() {
         const formBlogs = document.querySelector("#form-add-blogs");
         const image = document.querySelector("#image");
+        const imagePreview = document.querySelector("#previewImage");
 
+        image.addEventListener("change", () => {
+            imagePreview.src = URL.createObjectURL(image.files[0]);
+        });
         const CLODINARY_API = "https://api.cloudinary.com/v1_1/assjavascript/image/upload";
         const CLODINARY_PRESET = "gxpasiys";
 

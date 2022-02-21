@@ -1,3 +1,7 @@
+// eslint-disable-next-line no-unused-vars
+import $ from "jquery";
+// eslint-disable-next-line no-unused-vars
+import validate from "jquery-validation";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import { signin } from "../../api/user";
@@ -30,13 +34,19 @@ const Signin = {
         <input type="hidden" name="remember" value="true">
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
-            <input id="email" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="*VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: mail@gmail.com'" value="">
+            <input id="email" name="email" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="*VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: mail@gmail.com'" value="">
         </div>
         <div class="mt-8 content-center">
             <label class="text-sm font-bold text-gray-700 tracking-wide">
                 Password
             </label>
-            <input id="password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="*VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: *****'" value="">
+            <input id="password" name="password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="*VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: *****'" value="">
+        </div>
+        <div class="mt-8 content-center">
+            <label class="text-sm font-bold text-gray-700 tracking-wide">
+               Confirm Password
+            </label>
+            <input id="confirm_password" name="confirm_password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="*VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = '*VD: *****'" value="">
         </div>
         <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -68,29 +78,61 @@ const Signin = {
         `;
     },
     afterRender() {
-        const signinForm = document.querySelector("#signin");
-        signinForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
+        $("#signin").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#password",
+                },
+            },
+            messages: {
+                email: "Vui lòng nhập một địa chỉ email hợp lệ",
+                password: {
+                    required: "Vui lòng nhập mật khẩu",
+                    minlength: "Mật khẩu của bạn phải có ít nhất 6 ký tự",
+                },
+                confirm_password: {
+                    required: "Vui lòng nhập mật khẩu",
+                    minlength: "Mật khẩu của bạn phải có ít nhất 6 ký tự",
+                    equalTo: "Vui lòng nhập lại mật khẩu như trên",
+                },
+            },
+            submitHandler: (form) => {
+                async function signinHandle() {
+                    try {
+                        const { data } = await signin({
+                            email: document.querySelector("#email").value,
+                            password: document.querySelector("#password").value,
+                            confirm_password: document.querySelector("#confirm_password").value,
+                        });
 
-            try {
-                const { data } = await signin({
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data.user));
-                    toastr.success("Đăng nhập thành công");
-                    setTimeout(() => {
-                        if (data.user.id === 1) {
-                            document.location.href = "/admin/dashboard";
-                        } else {
-                            document.location.href = "/";
+                        if (data) {
+                            localStorage.setItem("user", JSON.stringify(data.user));
+                            toastr.success("Đăng nhập thành công");
+                            setTimeout(() => {
+                                if (data.user.id === 1) {
+                                    document.location.href = "/admin/dashboard";
+                                } else {
+                                    document.location.href = "/";
+                                }
+                            }, 2000);
                         }
-                    }, 2000);
+                    } catch (error) {
+                        toastr.error(error.response.data);
+                    }
+                    form.reset();
                 }
-            } catch (error) {
-                toastr.error(error.response.data);
-            }
+                signinHandle();
+            },
         });
     },
 };

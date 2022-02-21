@@ -76,3 +76,113 @@
 .product_item:hover .btn_add_cart{
     @apply translate-y-0
 }
+.content-cart{
+    display: flex;
+    justify-content: center;
+}
+.content-cart-columns{
+    padding: 15px 30px;
+}
+table {     
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+td input::-webkit-outer-spin-button,
+td input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.btn-continue{
+    color: #f00;
+    background-color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 3px 5px;
+}
+.btn-continue a{
+    text-decoration: none;
+    color: #f00;
+    font-size: 15px;
+}
+.btn-continue a:hover{
+    color: #000;
+}
+.btn-continue i{
+    padding-right: 5px;
+}
+.content-cart-pay{
+    padding: 15px 30px;
+    background: rgb(228, 226, 226);
+}
+.hr-top{
+    border: 1px dashed #ccc;
+    width: 500px;
+}
+.content-pay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f00 ;
+}
+.title-pay{
+    color: rgb(155, 153, 153);
+}
+.money-pay{
+    font-weight: 600;
+}
+.btn-pay{
+    margin-top: 20px;
+    width: 100%;
+    height: 37px;
+    font-size: 17px;
+    color: #fff;
+    background-color: #ffba02;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.hr-bottom{
+    border: 1px dashed #ccc;
+    width: 500px;
+}
+.check-gift{
+    margin-top: 20px;
+    width: 98.6%;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid rgb(150, 147, 147);
+    outline: none;
+}
+.check-gift::placeholder{
+    color: rgb(202, 199, 199);
+}
+.btn-gift{
+    margin-top: 20px;
+    width: 150%;
+    height: 37px;
+    font-size: 17px;
+    color: #696969;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.check-girt-bottom img{
+    width: 120px;
+    margin-right: 50px;
+}
+.check-girt-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.check-delete{
+    text-decoration: none;
+    padding: 8px;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 5px;
+}

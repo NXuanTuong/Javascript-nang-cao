@@ -10,7 +10,7 @@ export const signup = (user) => {
     return instance.post(url, user);
 };
 
-export const getAll = () => {
+export const All = () => {
     const url = "/users";
     return instance.get(url);
 };

@@ -11,6 +11,14 @@ import HomePage from "./pages/home";
 import NewPage from "./pages/news";
 import ProductPage from "./pages/product";
 import ListCustomer from "./pages/admin/Customer/List_customer";
+import ListProducts from "./pages/admin/Products";
+import addProducts from "./pages/admin/Products/Service/add_product";
+import editProducts from "./pages/admin/Products/Service/edit_product";
+import ListCategory from "./pages/admin/Category";
+import addCategory from "./pages/admin/Category/Service/add_category";
+import editCategory from "./pages/admin/Category/Service/edit_category";
+import DetailsProduct from "./pages/detail_product";
+import PageCart from "./pages/cart";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -48,8 +56,17 @@ router.on({
     "/product": () => {
         print(ProductPage);
     },
+    "/product/:id": () => {
+        print(ProductPage);
+    },
+    "/details_product/:id": (value) => {
+        print(DetailsProduct, value.data.id);
+    },
     "/contact": () => {
         print(ContactPage);
+    },
+    "/cart": () => {
+        print(PageCart);
     },
     "/signup": () => {
         print(Signup);
@@ -71,6 +88,24 @@ router.on({
     },
     "/admin/users": () => {
         print(ListCustomer);
+    },
+    "/admin/products": () => {
+        print(ListProducts);
+    },
+    "/admin/products/add": () => {
+        print(addProducts);
+    },
+    "/admin/products/:id/edit": (value) => {
+        print(editProducts, value.data.id);
+    },
+    "/admin/category": () => {
+        print(ListCategory);
+    },
+    "/admin/category/add": () => {
+        print(addCategory);
+    },
+    "/admin/category/:id/edit": (value) => {
+        print(editCategory, value.data.id);
     },
 });
 router.resolve();

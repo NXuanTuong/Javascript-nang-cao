@@ -260,5 +260,8 @@ const NewPage = {
         ${FooterPage.render()}
         `;
     },
+    afterRender() {
+        NavHeader.afterRender();
+    },
 };
 export default NewPage;

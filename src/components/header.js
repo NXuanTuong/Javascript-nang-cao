@@ -2,6 +2,10 @@ import { ReRender } from "../utils/Rerender";
 
 const NavHeader = {
     render() {
+        let cart = [];
+        if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+        }
         return /* html */ `
         <header id="header">
             <div class="px-3">
@@ -23,7 +27,7 @@ const NavHeader = {
 
                         <div>
                             <ul class="list-none items-center m-0 p-0 flex justify-between">
-                                <li class="list-item px-5"><a href ="">
+                                <li class="list-item px-5">
                                     <form class="bg-gray-300 border rounded-md py-[8px] px-[7px] duration-1000 my-2">
                                         <button type=""><i class="bi bi-search"></i></button>
                                         <input type="" placeholder="Men's watch..." class="border-none bg-transparent w-[250px] px-2 outline-none" name="" value="">
@@ -57,11 +61,14 @@ const NavHeader = {
                                     </div>
                                     </li>
                                 `}
-                                <li class="list-item"><a href ="">
-                                <span class="text-black text-lg font-semibol px-4 py-3 hover:text-red-500 cursor-pointer">
-                                <i class="fas fa-shopping-cart"></i>
+
+                                <li class="list-item"><a href ="/cart">
+                                <span class="text-black relative text-lg font-semibol px-4 py-3 cursor-pointer">
+                                      <i class="fas fa-shopping-cart"></i>
+                                      <div id="cartID" class="boder absolute border-red-500 bg-red-500 rounded-full px-2 py-1 -top-[2px] right-[5px] text-white text-xs text-center">${cart.length}</div>
                                 </span></a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
@@ -73,14 +80,21 @@ const NavHeader = {
     },
     afterRender() {
         const emailHeader = document.querySelector("#email");
+        const cart = document.querySelector("#cartID");
         if (emailHeader) {
             emailHeader.innerHTML = JSON.parse(localStorage.getItem("user")).email;
         }
         const logout = document.querySelector("#logout");
-        logout.addEventListener("click", () => {
-            localStorage.removeItem("user");
-            ReRender(NavHeader, "#header");
-        });
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                ReRender(NavHeader, "#header");
+            });
+        }
+
+        if (cart) {
+            cart.innerHTML = JSON.parse(localStorage.getItem("cart")).length;
+        }
     },
 };
 export default NavHeader;

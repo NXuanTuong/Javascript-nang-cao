@@ -1,6 +1,11 @@
+// eslint-disable-next-line no-unused-vars
+import $ from "jquery";
+// eslint-disable-next-line no-unused-vars
+import validate from "jquery-validation";
 import axios from "axios";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+
 import { signup } from "../../api/user";
 
 const Signup = {
@@ -31,29 +36,29 @@ const Signup = {
         <input type="hidden" name="remember" value="true">
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Full Name</label>
-            <input id="name" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: Nguyen Van A" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: Nguyen Van A'" >
+            <input id="name" name="fullname" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: Nguyen Van A" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: Nguyen Van A'" >
         </div>
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
-            <input id="email" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: mail@gmail.com'" >
+            <input id="email" name="email" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: mail@gmail.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: mail@gmail.com'" >
         </div>
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Image</label>
-            <input id="image" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="file">
+            <input id="image" name="image" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="file">
         </div>
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Address</label>
-            <input id="address" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: nam cao , kiến xương" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: nam cao , kiến xương'" >
+            <input id="address" name="address" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: nam cao , kiến xương" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: nam cao , kiến xương'" >
         </div>
         <div class="relative">
             <label class="text-sm font-bold text-gray-700 tracking-wide">Position</label>
-            <input id="position" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: admin" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: admin'" >
+            <input id="position" name="position" class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="text" placeholder="VD: admin" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: admin'" >
         </div>
         <div class="mt-8 content-center">
             <label class="text-sm font-bold text-gray-700 tracking-wide">
                 Password
             </label>
-            <input id="password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: *****'" >
+            <input name="password" id="password" class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" placeholder="VD: *****" onfocus="this.placeholder = ''" onblur="this.placeholder = 'VD: *****'" >
         </div>
         <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -80,37 +85,84 @@ const Signup = {
         `;
     },
     afterRender() {
-        const signupForm = document.querySelector("#signup");
         const image = document.querySelector("#image");
 
         const CLODINARY_API = "https://api.cloudinary.com/v1_1/assjavascript/image/upload";
         const CLODINARY_PRESET = "gxpasiys";
 
-        signupForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            const file = image.files[0];
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append("upload_preset", CLODINARY_PRESET);
-
-            const { data } = await axios.post(CLODINARY_API, formData, {
-                headers: {
-                    "Content-Type": "application/form-data",
+        $("#signup").validate({
+            rules: {
+                fullname: {
+                    required: true,
+                    minlength: 17,
                 },
-            });
-            signup({
-                name: document.querySelector("#name").value,
-                email: document.querySelector("#email").value,
-                image: data.url,
-                address: document.querySelector("#address").value,
-                position: document.querySelector("#position").value,
-                password: document.querySelector("#password").value,
-            });
-            toastr.success("Đăng ký thành công");
-            setTimeout(() => {
-                document.location.href = "/signin";
-            }, 2000);
+                email: {
+                    required: true,
+                    email: true,
+                },
+                image: "required",
+                address: {
+                    required: true,
+                    minlength: 10,
+                },
+                position: {
+                    required: true,
+                    minlength: 5,
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                },
+            },
+            messages: {
+                fullname: {
+                    required: "Vui lòng nhập đầy đủ họ tên",
+                    minlength: "Tên người dùng của bạn phải có ít nhất 17 ký tự",
+                },
+                email: "Vui lòng nhập một địa chỉ email hợp lệ",
+                image: "Vui lòng chọn image",
+                address: {
+                    required: "Vui lòng nhập địa chỉ",
+                    minlength: "Địa chỉ của bạn phải có ít nhất 10 ký tự",
+                },
+                position: {
+                    required: "Vui lòng nhập chức vụ",
+                    minlength: "Chức vụ của bạn phải có ít nhất 5 ký tự",
+                },
+                password: {
+                    required: "Vui lòng nhập mật khẩu",
+                    minlength: "Mật khẩu của bạn phải có ít nhất 6 ký tự",
+                },
+            },
+
+            submitHandler: (form) => {
+                async function sigupHandler() {
+                    const file = image.files[0];
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLODINARY_PRESET);
+
+                    const { data } = await axios.post(CLODINARY_API, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    signup({
+                        name: document.querySelector("#name").value,
+                        email: document.querySelector("#email").value,
+                        image: data.url,
+                        address: document.querySelector("#address").value,
+                        position: document.querySelector("#position").value,
+                        password: document.querySelector("#password").value,
+                    });
+                    toastr.success("Đăng ký thành công");
+                    setTimeout(() => {
+                        document.location.href = "/signin";
+                    }, 2000);
+                    form.reset();
+                }
+                sigupHandler();
+            },
         });
     },
 };

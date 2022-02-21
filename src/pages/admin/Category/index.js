@@ -1,7 +1,7 @@
 import HeaderAdmin from "../../../components/admin/header_admin";
-import TablePost from "../../../components/admin/table_post";
+import TableCategory from "../../../components/admin/table_category";
 
-const ListBlogs = {
+const ListCategory = {
     async render() {
         return /* html */ `
             ${HeaderAdmin.render()};
@@ -59,10 +59,10 @@ const ListBlogs = {
         </div>
         </div>
         <div class="flex items-center space-x-2 sm:space-x-3 ml-auto">
-        <a href="/admin/blogs/add">
+        <a href="/admin/category/add">
         <button type="button" data-modal-toggle="add-user-modal" class="w-1/2 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium inline-flex items-center justify-center rounded-lg text-sm px-3 py-2 text-center sm:w-auto">
         <svg class="-ml-1 mr-2 h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
-        Add user
+        Add category
         </button>
         </a>
         <a href="#" class="w-1/2 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-cyan-200 font-medium inline-flex items-center justify-center rounded-lg text-sm px-3 py-2 text-center sm:w-auto">
@@ -86,27 +86,15 @@ const ListBlogs = {
         <label for="checkbox-all" class="sr-only">checkbox</label>
         </div>
         </th>
-        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-        Avatar
-        </th>
-        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-        Title
-        </th>
-        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-        Content
-        </th>
-        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-        Category
-        </th>
-        <th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase">
-        comment
+        <th scope="col" class="p-4 text-center text-xs font-medium text-gray-500 uppercase">
+        Name
         </th>
         <th scope="col" class="p-4">
         </th>
         </tr>
         </thead>
-        <tbody id="tbody-blogs" class="bg-white divide-y divide-gray-200">
-             ${await TablePost.render()}
+        <tbody id="tbody-category" class="bg-white divide-y divide-gray-200">
+             ${await TableCategory.render()}
         </tbody>
         </table>
         </div>
@@ -134,14 +122,13 @@ const ListBlogs = {
         </a>
         </div>
         </div>
-        
         </main>
         </div>
         </div>
         `;
     },
     afterRender() {
-        TablePost.afterRender();
+        TableCategory.afterRender();
     },
 };
-export default ListBlogs;
+export default ListCategory;

@@ -95,5 +95,8 @@ const AboutPage = {
         
         `;
     },
+    afterRender() {
+        NavHeader.afterRender();
+    },
 };
 export default AboutPage;

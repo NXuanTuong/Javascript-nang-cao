@@ -5,16 +5,16 @@
       "title": "Xin chào mọi người 7",
       "content": "Chào mừng mọi người đến với trang website của mình",
       "category": "Du lịch, Ăn uống",
-      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644661539/byuzyd3nblmtrf4k4n0d.jpg",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645234889/bkroi5uhip7is9181p5g.jpg",
       "comment": "03 comment"
     },
     {
+      "id": 2,
       "title": "Xin chào mọi người",
       "content": "Chào mừng mọi người đến với trang website của mình",
       "category": "Du lịch, Ăn uống",
       "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644661639/jhfiyx9bjzf92tmyslqf.jpg",
-      "comment": "04 comment",
-      "id": 2
+      "comment": "06 comment"
     }
   ],
   "users": [
@@ -35,6 +35,74 @@
       "address": "Nam cao",
       "position": "admin",
       "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "FOSSIL ME3104 TOWNSMAN AUTOMATIC LEATHER WATCH 44MM",
+      "priceold": "200.000",
+      "pricenew": "150.000",
+      "category": "1",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644922838/xukoktze3zqeemdxpadi.jpg"
+    },
+    {
+      "id": 2,
+      "name": "LONGINES MASTER WATCH 38.5MM",
+      "priceold": "200.000",
+      "pricenew": "150.000",
+      "category": "1",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644915672/fgekyfyygnryymhqlivc.jpg"
+    },
+    {
+      "id": 3,
+      "name": "OMEGA DE VILLE PRESTIGE WATCH 39.5MM",
+      "priceold": "500.000",
+      "pricenew": "300.000",
+      "category": "2",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644915858/ugstibg85qgmptcklg9e.jpg"
+    },
+    {
+      "id": 4,
+      "name": "MICHAEL KORS MINI SOFIE PAVÉ PEACOCK WATCH 36MM",
+      "priceold": "700.000",
+      "pricenew": "500.000",
+      "category": "2",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644915869/a3pqyxaejbsznzlyefyp.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Khôi Tay To 1",
+      "priceold": "500.000",
+      "pricenew": "300.000",
+      "category": "2",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644923090/l0rjziqqjddpbd0enue4.jpg"
+    },
+    {
+      "name": "Xuan Tuong",
+      "priceold": "500.000",
+      "pricenew": "300.000",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644933456/ife6rau7ybrmozr4yt2u.jpg",
+      "category": "2",
+      "id": 6
+    },
+    {
+      "name": "Xuan Tuong 2",
+      "priceold": "500.000",
+      "pricenew": "300.000",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644935449/ifuboisq1watalww3dpu.jpg",
+      "category": "1",
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "nameCate": "Prototai"
+    },
+    {
+      "nameCate": "Casio ",
+      "id": "2"
     }
   ]
 }
