@@ -2,6 +2,7 @@ import axios from "axios";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import ListProducts from "..";
+import { categoriesAll } from "../../../../api/category";
 import { get, update } from "../../../../api/products";
 import HeaderAdmin from "../../../../components/admin/header_admin";
 import { ReRender } from "../../../../utils/Rerender";
@@ -9,6 +10,8 @@ import { ReRender } from "../../../../utils/Rerender";
 const editProducts = {
     async render(id) {
         const { data } = await get(id);
+        const getCate = await categoriesAll();
+        const dataCate = getCate.data;
         return /* html */ `
         ${HeaderAdmin.render()}
         <div class="bg-gray-50 h-full w-full ">
@@ -36,6 +39,15 @@ const editProducts = {
             <label for="image" class="block text-sm font-medium text-gray-700">Image<span class="text-red-400">*</span></label>
             <input type="file" name="image" id="image" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 p-3 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-md">
           </div>
+
+          <div class="col-span-6 sm:col-span-3">
+                <label for="image" class="block text-sm font-medium text-gray-700">Category<span class="text-red-400">*</span></label>
+                <select class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 p-3 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-md" id="select_cate">
+                ${dataCate.map((cate) => `
+                    <option value="${cate.id}">${cate.nameCate}</option>
+                `)}
+                </select>
+              </div>
 
         </div>
       </div>
@@ -78,6 +90,7 @@ const editProducts = {
                     priceold: document.querySelector("#priceold").value,
                     pricenew: document.querySelector("#pricenew").value,
                     image: data.url,
+                    category: document.querySelector("#select_cate").value,
                 });
                 toastr.success("Sửa thành công");
                 setTimeout(async () => {

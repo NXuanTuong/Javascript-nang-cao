@@ -1,5 +1,6 @@
 import { ReRender } from "../utils/Rerender";
 
+// let param = null;
 const NavHeader = {
     render() {
         let cart = [];
@@ -27,18 +28,14 @@ const NavHeader = {
 
                         <div>
                             <ul class="list-none items-center m-0 p-0 flex justify-between">
-                                <li class="list-item px-5">
-                                    <form class="bg-gray-300 border rounded-md py-[8px] px-[7px] duration-1000 my-2">
-                                        <button type=""><i class="bi bi-search"></i></button>
-                                        <input type="" placeholder="Men's watch..." class="border-none bg-transparent w-[250px] px-2 outline-none" name="" value="">
-                                    </form>
-                                </li>
                                 ${localStorage.getItem("user") ? /* html */`
                                     <li>
                                     <div class="inline-block">
+                                    <a href="">
                                     <span class="text-black text-base font-semibol">
                                          <i class="fa-solid fa-user-check"></i>
                                     <span>
+                                    </a>
                                         <a href="" id="email" class="px-3"></a></span> 
                                     <span>
                                     <a href="" id="logout" class="hover:text-red-500 cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
@@ -81,6 +78,7 @@ const NavHeader = {
     afterRender() {
         const emailHeader = document.querySelector("#email");
         const cart = document.querySelector("#cartID");
+
         if (emailHeader) {
             emailHeader.innerHTML = JSON.parse(localStorage.getItem("user")).email;
         }

@@ -1,6 +1,7 @@
 import { categoriesAll } from "../api/category";
 import { productAll } from "../api/products";
 import FooterPage from "../components/footer";
+// eslint-disable-next-line import/no-cycle
 import NavHeader from "../components/header";
 import { ReRender } from "../utils/Rerender";
 
@@ -17,6 +18,7 @@ const ProductPage = {
             <div class="flex justify-between px-[123px] bg-[#eff5f8] items-center">
                 <div class="block">
                     <ul class="text-center p-5">
+                    
                         <li class="inline-block"><a class="px-1 py-3 text-lg font-medium text-[#8d979d]" href="/">Home</a></li> 
                         <li class="inline-block"><span class="px-1 text-lg font-medium text-[#8d979d] py-3">></span></li>
                         <li class="inline-block"><a  class="px-1 text-lg font-medium text-black py-3" href="/product">Shop</a></li>
@@ -46,7 +48,14 @@ const ProductPage = {
                     <div>
                         <div class="mb-16">
                             <h3 class="uppercase text-lg font-medium mb-5">PRODUCT PORTFOLIO</h3>
+                           <ul>
+                               <form id="search" class="bg-gray-300 border list-item px-5 rounded-md py-[8px] px-[7px] duration-1000 my-2">
+                                <button type=""><i class="bi bi-search"></i></button>
+                                <input type="" id="productSeach" placeholder="Men's watch..." class="border-none bg-transparent w-[250px] px-2 outline-none" name="" value="">
+                                </form>
+                           </ul>
                             
+                    
                             <div class="border p-5 bg-[#fbf9ff] shadow-md">
                             ${dataCate.map((catedata) => /* html */ `
                                 <ul>
@@ -178,7 +187,7 @@ const ProductPage = {
                     <!-- Start Grid-2 -->
                 <div>
                     <div>
-                        <div class="grid grid-cols-3 mb-5 gap-10">
+                        <div class="grid grid-cols-3 mb-5 gap-10" id="product">
                         ${data.map((products) => /* html */`
                                 <div class="px-3 py-7 shadow hover:shadow-lg product_item">
                                 <div class="relative overflow-hidden">
@@ -239,9 +248,87 @@ const ProductPage = {
     </div>
         `;
     },
-    afterRender() {
-        NavHeader.afterRender();
+    async afterRender() {
         const btnsCate = document.querySelectorAll("[getCate]");
+        const search = document.querySelector("#productSeach");
+        const product = document.querySelector("#product");
+
+        const data = await productAll(param);
+
+        search.addEventListener("keyup", (e) => {
+            e.preventDefault();
+
+            if (data != null && search.value.length > 5) {
+                const dataSearch = data.data.filter((item) => item.name.includes(search.value));
+                const result = dataSearch.map((products) => /* html */`
+                <div class="px-3 py-7 shadow hover:shadow-lg product_item">
+                <div class="relative overflow-hidden">
+                        <img src="${products.image}" class="object-cover w-full h-64" alt="">
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-red-300 py-1 border -left-[5%]"><p>20%</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl -top-[2%] right-[9px] hover:text-red-500"><i class="bi bi-heart"></i></span>
+                            <div class="absolute top-[47%] -left-[5%] mx-5 feedback_item_product">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="cursor-pointer"><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[80%] left-[20%] delay-150 duration-200 ease-in-out py-1 px-3 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                        <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
+                </div>
+
+                <div>
+                    <h3 class="text-base mb-2 font-semibold text-center overflow-ellipsis w-75 whitespace-nowrap overflow-hidden"><a href="/#/details_product/${products.id}">${products.name}</a></h3>
+                    <div class="flex justify-center items-center">
+                        <del class="text-red-300"><span>$</span>${products.priceold}</del>
+                        <p class="px-2 font-semibold text-lg"><span>$</span>${products.pricenew}</p>
+                    </div>
+                </div>
+            </div>
+        `).join("");
+
+                product.innerHTML = result;
+            } else if (!search.value) {
+                const dataSearch = data.data.filter((item) => item.name.includes(search.value));
+                const result = dataSearch.map((products) => /* html */`
+                <div class="px-3 py-7 shadow hover:shadow-lg product_item">
+                <div class="relative overflow-hidden">
+                        <img src="${products.image}" class="object-cover w-full h-64" alt="">
+                            <span class="absolute top-[5%] px-5 rounded-2xl text-white bg-red-300 py-1 border -left-[5%]"><p>20%</p></span>
+                            <span class="text-black icon_heart cursor-pointer absolute text-2xl -top-[2%] right-[9px] hover:text-red-500"><i class="bi bi-heart"></i></span>
+                            <div class="absolute top-[47%] -left-[5%] mx-5 feedback_item_product">
+                            <ul>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="text-yellow-300 cursor-pointer"><i class="bi bi-star-fill"></i></li>
+                                <li class="cursor-pointer"><i class="bi bi-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="hover:bg-red-500 btn_add_cart cursor-pointer top-[80%] left-[20%] delay-150 duration-200 ease-in-out py-1 px-3 rounded-md text-red-500 hover:text-white border border-red-400 font-semibold uppercase absolute">
+                        <a herf="">Add to Cart <span><i class="fas fa-shopping-cart"></i></span></a>
+                        </div>
+                </div>
+
+                <div>
+                    <h3 class="text-base mb-2 font-semibold text-center overflow-ellipsis w-75 whitespace-nowrap overflow-hidden"><a href="/#/details_product/${products.id}">${products.name}</a></h3>
+                    <div class="flex justify-center items-center">
+                        <del class="text-red-300"><span>$</span>${products.priceold}</del>
+                        <p class="px-2 font-semibold text-lg"><span>$</span>${products.pricenew}</p>
+                    </div>
+                </div>
+            </div>
+        `).join("");
+
+                product.innerHTML = result;
+            } else {
+                product.innerHTML = "<div class=\"flex justify-center items-center\"><img class=\"m-auto w-full max-w-full object-cover\" src=\"https://i.pinimg.com/originals/1d/a7/19/1da719e0c7d9b1682cf3e4cfad6d8f08.gif\"></img><p class=\"text-xl\">Không tìm thấy sản phẩm này?</p></div>";
+            }
+        });
+
         btnsCate.forEach((btnCate) => {
             btnCate.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -252,6 +339,7 @@ const ProductPage = {
                 ReRender(ProductPage, "#app");
             });
         });
+        NavHeader.afterRender();
     },
 };
 export default ProductPage;
