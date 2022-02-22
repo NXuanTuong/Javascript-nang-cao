@@ -109,7 +109,7 @@ const PageCart = {
                 </div>
 
                 <div>
-                    <button class="text-center px-2 py-3 text-lg font-semibold rounded bg-green-600 text-white w-full" type="">Check Out</button>
+                    <button class="text-center px-2 py-3 text-lg font-semibold rounded bg-green-600 text-white w-full" type=""><a href="/#/checkout">Check Out</a></button>
                 </div>
             </div>
           </div>
@@ -146,7 +146,6 @@ const PageCart = {
         const totalCartRender = document.querySelector("#total_cart");
         cart.forEach((item) => {
             totalCart += item.total;
-            console.log(totalCart);
         });
         totalCartRender.innerHTML = totalCart;
         NavHeader.afterRender();

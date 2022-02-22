@@ -43,8 +43,8 @@
       "name": "FOSSIL ME3104 TOWNSMAN AUTOMATIC LEATHER WATCH 44MM",
       "priceold": "200.000",
       "pricenew": "150.000",
-      "category": "1",
-      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644922838/xukoktze3zqeemdxpadi.jpg"
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645460483/por0e5w7dewpiojwsuu8.jpg",
+      "category": "2"
     },
     {
       "id": 2,
@@ -103,6 +103,16 @@
     {
       "nameCate": "Casio ",
       "id": "2"
+    }
+  ],
+  "orders": [
+    {
+      "fullname": "Nguyễn Xuân Tường",
+      "email": "tuongnxph17348@fpt.edu.vn",
+      "Address": "Nam cao\nKiến Xương",
+      "number": "0359282859",
+      "note": "Ok ",
+      "id": 3
     }
   ]
 }

@@ -19,6 +19,8 @@ import addCategory from "./pages/admin/Category/Service/add_category";
 import editCategory from "./pages/admin/Category/Service/edit_category";
 import DetailsProduct from "./pages/detail_product";
 import PageCart from "./pages/cart";
+import CheckOut from "./pages/checkout";
+import OrderAdmin from "./pages/admin/Orders";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -74,6 +76,9 @@ router.on({
     "/signin": () => {
         print(Signin);
     },
+    "/checkout": () => {
+        print(CheckOut);
+    },
     "/admin/dashboard": () => {
         print(DashBoard);
     },
@@ -106,6 +111,9 @@ router.on({
     },
     "/admin/category/:id/edit": (value) => {
         print(editCategory, value.data.id);
+    },
+    "/admin/orders": () => {
+        print(OrderAdmin);
     },
 });
 router.resolve();
