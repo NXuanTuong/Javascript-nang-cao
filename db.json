@@ -35,6 +35,15 @@
       "address": "Nam cao",
       "position": "admin",
       "id": 2
+    },
+    {
+      "email": "tuong1nxph17348@fpt.edu.com",
+      "password": "$2a$10$jiL.vYVBArtSCKTrYldLtOCNScZxVAsCvLwlQqG4pUzD7M9HeKS7q",
+      "name": "Nguyễn Xuân Tường 12",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645545666/yr8subhk0yyxuu9ovejh.jpg",
+      "address": "Nam cao , Kiến Xương",
+      "position": "admin",
+      "id": 3
     }
   ],
   "products": [
@@ -108,11 +117,11 @@
   "orders": [
     {
       "fullname": "Nguyễn Xuân Tường",
-      "email": "tuongnxph17348@fpt.edu.vn",
+      "email": "tuong1nxph17348@fpt.edu.com",
       "Address": "Nam cao\nKiến Xương",
       "number": "0359282859",
-      "note": "Ok ",
-      "id": 3
+      "note": "SSSS",
+      "id": 1
     }
   ]
 }

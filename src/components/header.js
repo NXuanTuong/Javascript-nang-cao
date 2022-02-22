@@ -31,7 +31,7 @@ const NavHeader = {
                                 ${localStorage.getItem("user") ? /* html */`
                                     <li>
                                     <div class="inline-block">
-                                    <a href="">
+                                    <a href="/customer-detail">
                                     <span class="text-black text-base font-semibol">
                                          <i class="fa-solid fa-user-check"></i>
                                     <span>

@@ -14,3 +14,12 @@ export const All = () => {
     const url = "/users";
     return instance.get(url);
 };
+export const get = (id) => {
+    const url = `/users/${id}`;
+    return instance.get(url, id);
+};
+
+export const update = (user) => {
+    const url = `/users/${user.id}`;
+    return instance.put(url, user);
+};
