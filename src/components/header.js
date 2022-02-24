@@ -31,11 +31,9 @@ const NavHeader = {
                                 ${localStorage.getItem("user") ? /* html */`
                                     <li>
                                     <div class="inline-block">
-                                    <a href="/customer-detail">
                                     <span class="text-black text-base font-semibol">
                                          <i class="fa-solid fa-user-check"></i>
                                     <span>
-                                    </a>
                                         <a href="" id="email" class="px-3"></a></span> 
                                     <span>
                                     <a href="" id="logout" class="hover:text-red-500 cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>

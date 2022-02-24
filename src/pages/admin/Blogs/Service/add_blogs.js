@@ -66,6 +66,7 @@ const addBlogs = {
         image.addEventListener("change", () => {
             imagePreview.src = URL.createObjectURL(image.files[0]);
         });
+
         const CLODINARY_API = "https://api.cloudinary.com/v1_1/assjavascript/image/upload";
         const CLODINARY_PRESET = "gxpasiys";
 

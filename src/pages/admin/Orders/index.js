@@ -108,7 +108,7 @@ const OrderAdmin = {
         </th>
         </tr>
         </thead>
-        <tbody id="tbody-orders" class="bg-white divide-y divide-gray-200">
+        <tbody id="order-table" class="bg-white divide-y divide-gray-200">
             ${await TableOrder.render()}
         </tbody>
         </table>

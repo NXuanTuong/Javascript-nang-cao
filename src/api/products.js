@@ -29,3 +29,11 @@ export const remove = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url, id);
 };
+export const productpage = (page = "", limit = "") => {
+    const url = `/products?_page=${page}&_limit=${limit}`;
+    return instance.get(url);
+};
+export const limitPageProducts = (inter) => {
+    const url = `/products${inter}`;
+    return instance.get(url);
+};

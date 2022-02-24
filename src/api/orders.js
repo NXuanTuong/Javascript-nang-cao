@@ -1,7 +1,7 @@
 import instance from "./instance";
 
-export const OrderAll = () => {
-    const url = "/orders";
+export const OrderAll = (id = "") => {
+    const url = `/users/${id}?_embed=orders`;
     return instance.get(url);
 };
 export const getOrders = (id) => {

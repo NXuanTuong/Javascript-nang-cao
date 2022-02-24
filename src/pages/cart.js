@@ -118,6 +118,7 @@ const PageCart = {
         `;
     },
     afterRender() {
+        NavHeader.afterRender();
         const btns = document.querySelectorAll(".btn");
         btns.forEach((btn) => {
             const { id } = btn.dataset;
@@ -148,7 +149,6 @@ const PageCart = {
             totalCart += item.total;
         });
         totalCartRender.innerHTML = totalCart;
-        NavHeader.afterRender();
     },
 };
 export default PageCart;

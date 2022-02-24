@@ -88,20 +88,36 @@
       "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644923090/l0rjziqqjddpbd0enue4.jpg"
     },
     {
+      "id": 6,
       "name": "Xuan Tuong",
       "priceold": "500.000",
       "pricenew": "300.000",
-      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644933456/ife6rau7ybrmozr4yt2u.jpg",
-      "category": "2",
-      "id": 6
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645673769/shpiccpwe5cku6pvkevo.jpg",
+      "category": "2LEVaK3"
     },
     {
+      "id": 7,
       "name": "Xuan Tuong 2",
       "priceold": "500.000",
       "pricenew": "300.000",
-      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1644935449/ifuboisq1watalww3dpu.jpg",
-      "category": "1",
-      "id": 7
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645673785/vzt8wt6iajgqv14fmmo3.jpg",
+      "category": "qneayZU"
+    },
+    {
+      "id": 8,
+      "name": "Đồng hồ nam Candino C4292/7",
+      "priceold": "500.000",
+      "pricenew": "300.000",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645673734/goqubsvt9dfsaditcuzj.jpg",
+      "category": "2LEVaK3"
+    },
+    {
+      "id": 9,
+      "name": "Đồng Hồ Đôi Vàng",
+      "priceold": "700.000",
+      "pricenew": "500.000",
+      "image": "http://res.cloudinary.com/assjavascript/image/upload/v1645673748/v7npduciap03mrzjoft4.jpg",
+      "category": "qneayZU"
     }
   ],
   "categories": [
@@ -112,16 +128,21 @@
     {
       "nameCate": "Casio ",
       "id": "2"
+    },
+    {
+      "nameCate": "Đồng hồ điện tử",
+      "id": "2LEVaK3"
+    },
+    {
+      "nameCate": "Đồng Hồ Đôi",
+      "id": "qneayZU"
     }
   ],
   "orders": [
     {
-      "fullname": "Nguyễn Xuân Tường",
-      "email": "tuong1nxph17348@fpt.edu.com",
-      "Address": "Nam cao\nKiến Xương",
-      "number": "0359282859",
-      "note": "SSSS",
-      "id": 1
+      "id": "1",
+      "status": "1",
+      "userId": 1
     }
   ]
 }
